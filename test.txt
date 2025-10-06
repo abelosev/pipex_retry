@@ -1,0 +1,7 @@
+pipex_retry rm -rf ou ou1 ou2 ou3 out outfile
+//
+pipex_retry rm -rf ls
+  
+pipex_retry rm -rf "wc -l"
+123
+pipex_retry where grep
