@@ -33,7 +33,7 @@ int ft_pipex(char **av, char **envp)
 	t_data data;
 	int tmp[2];
 
-	init_struct(&data, av);
+	init_struct(&data);
 	if (pipe(tmp) < 0)
 		exit_process(&data, NULL, errno);
 	init_fd(&data, tmp);

@@ -22,7 +22,7 @@ typedef struct s_data
 	int exitCode;
 } t_data;
 
-void	init_struct(t_data *data, char **av);
+void	init_struct(t_data *data);
 void	child1(t_data *data, char **av, char **envp);
 void	child2(t_data *data, char **av, char **envp);
 void	ft_wait(t_data *data);
@@ -30,6 +30,5 @@ void	exit_process(t_data *data, char **args, int flag);
 void	close_fd(t_fd *fd);
 void	free_tab(char **tab);
 char	**get_args(char **av, char **envp, int id);
-
 
 #endif
