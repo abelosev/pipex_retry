@@ -1,7 +1,5 @@
 #include "pipex.h"
 
-// использовать флаги, чтобы переписать закрытие fd короче
-
 void	child1(t_data *data, char **av, char **envp)
 {
 	char **args;
@@ -13,7 +11,7 @@ void	child1(t_data *data, char **av, char **envp)
 	close_fd(&data->fd[0]);
 	args = get_args(av, envp, 2);
 	if (!args)
-		exit_process(data, args, 127); 	// временно, пока не напиан get_path
+		exit_process(data, args, 127);
 	if (dup2(data->in.fd, STDIN_FILENO) < 0)
 		exit_process(data, args, errno);
 	close_fd(&data->in);
